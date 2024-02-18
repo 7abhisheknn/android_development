@@ -11,6 +11,8 @@ public class MyClass {
         numbersArray[3] = 40;
         numbersArray[4] = 50;
 
-        System.out.println("Element at index 0: " + numbersArray[0]);
+        for(int num: numbersArray) {
+            System.out.println(num);
+        }
     }
 }
