@@ -3,16 +3,13 @@ package com.example.lib;
 public class MyClass {
 
     public static void main(String[] args) {
-        System.out.println(addNumbers(100, 200));
-        System.out.println(addNumbers(100.55, 200.50));
-    }
-
-
-    static int addNumbers(int x, int y) {
-        return x + y;
-    }
-    static double addNumbers(double x, double y) {
-        return x + y;
+        Car redCar = new Car();
+        redCar.year = 2023;
+        redCar.speed = 180;
+        redCar.accelerate();
+        redCar.accelerate();
+        redCar.brake();
+        System.out.println(redCar);
     }
 }
 
@@ -22,8 +19,10 @@ class Car {
 
     void accelerate() {
         speed += 10;
+        System.out.println("Your new speed: " + speed);
     }
     void brake() {
         speed -= 5;
+        System.out.println("Your new speed: " + speed);
     }
 }
