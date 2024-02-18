@@ -3,12 +3,10 @@ package com.example.lib;
 public class MyClass {
 
     public static void main(String[] args) {
-        // While loop
+        // For loop
 
-        int i = 0;
-        while (i < 5) {
+        for (int i = 0; i < 5; i++) {
             System.out.println(i);
-            ++i;
         }
     }
 }
