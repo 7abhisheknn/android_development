@@ -15,5 +15,13 @@ public class MyClass {
         long l = 1122334455667788L;
         System.out.println("Long " + l + " Max " + Long.MAX_VALUE + " Min " + Long.MIN_VALUE);
 
+        float f = 3.14F;
+        System.out.println("Float " + f + " Max " + Float.MAX_VALUE + " Min " + Float.MIN_VALUE);
+
+
+        double d = 3.14159;
+        System.out.println("Double " + f + " Max " + Double.MAX_VALUE + " Min " + Double.MIN_VALUE);
+
+
     }
 }
