@@ -6,5 +6,7 @@ public class MyClass {
     multi
     line
     comment
+    this are not executed
+    this is for information
      */
 }
