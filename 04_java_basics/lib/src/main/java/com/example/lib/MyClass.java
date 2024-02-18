@@ -3,7 +3,8 @@ package com.example.lib;
 public class MyClass {
 
     public static void main(String[] args) {
-        // Java Output
-        System.out.print("Hello world");
+
+        int age = 60;
+        System.out.print("My age: " + age);
     }
 }
