@@ -3,11 +3,14 @@ package com.example.lib;
 public class MyClass {
 
     public static void main(String[] args) {
-        // Continue and break
-        for (int i = 0; i < 10; i++) {
-            if (i%2 == 0) continue;
-            if (i == 7) break;
-            System.out.println(i);
-        }
+        int[] numbersArray = new int[5];
+
+        numbersArray[0] = 10;
+        numbersArray[1] = 20;
+        numbersArray[2] = 30;
+        numbersArray[3] = 40;
+        numbersArray[4] = 50;
+
+        System.out.println("Element at index 0: " + numbersArray[0]);
     }
 }
