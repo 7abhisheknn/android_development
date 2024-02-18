@@ -21,9 +21,13 @@ public class MyClass {
         double d = 3.14159;
         System.out.println("Double " + f + " Max " + Double.MAX_VALUE + " Min " + Double.MIN_VALUE);
 
-
         boolean isRaining = true;
         System.out.println("Boolean " + isRaining);
+
+        char c = 'A';
+        System.out.println("Character " + f + " Max " + Character.MAX_VALUE + " Min " + Character.MIN_VALUE);
+        System.out.println("Character " + (int)f + " Max " + (int)Character.MAX_VALUE + " Min " + (int)Character.MIN_VALUE);
+
 
 
     }
