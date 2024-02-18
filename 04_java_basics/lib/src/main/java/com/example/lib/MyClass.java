@@ -18,9 +18,12 @@ public class MyClass {
         float f = 3.14F;
         System.out.println("Float " + f + " Max " + Float.MAX_VALUE + " Min " + Float.MIN_VALUE);
 
-
         double d = 3.14159;
         System.out.println("Double " + f + " Max " + Double.MAX_VALUE + " Min " + Double.MIN_VALUE);
+
+
+        boolean isRaining = true;
+        System.out.println("Boolean " + isRaining);
 
 
     }
