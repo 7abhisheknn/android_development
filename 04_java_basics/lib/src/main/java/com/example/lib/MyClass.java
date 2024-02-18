@@ -15,3 +15,15 @@ public class MyClass {
         return x + y;
     }
 }
+
+class Car {
+    int year;
+    int speed;
+
+    void accelerate() {
+        speed += 10;
+    }
+    void brake() {
+        speed -= 5;
+    }
+}
