@@ -10,7 +10,7 @@ public class MyClass {
         int a = sc.nextInt();
         System.out.println("Give another number: ");
         int b = sc.nextInt();
-        System.out.println(a/b);
+        System.out.println((float)a/b);
         System.out.println(a%b);
     }
 }
