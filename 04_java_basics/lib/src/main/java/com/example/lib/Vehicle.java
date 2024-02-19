@@ -1,6 +1,6 @@
 package com.example.lib;
 
-public class Vehicle {
+public abstract class Vehicle {
     int numberOfWheels;
 
     public Vehicle(int numberOfWheels) {
@@ -13,4 +13,5 @@ public class Vehicle {
     void stop() {
         System.out.println("The Vehicle Stops");
     }
+    abstract void brake();
 }

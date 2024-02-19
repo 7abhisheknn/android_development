@@ -15,4 +15,9 @@ public class Car extends Vehicle{
     void start() {
         System.out.println("The Car Starts");
     }
+
+    @Override
+    void brake() {
+        System.out.println("Applying mechanical break");
+    }
 }
