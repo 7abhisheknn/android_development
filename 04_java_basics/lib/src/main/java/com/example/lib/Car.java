@@ -10,4 +10,9 @@ public class Car extends Vehicle{
     void honk() {
         System.out.println("Beep! Beep!");
     }
+
+    @Override
+    void start() {
+        System.out.println("The Car Starts");
+    }
 }
