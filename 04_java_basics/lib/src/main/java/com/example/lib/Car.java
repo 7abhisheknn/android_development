@@ -6,4 +6,8 @@ public class Car extends Vehicle{
         super(4);
         this.carModel = carModel;
     }
+
+    void honk() {
+        System.out.println("Beep! Beep!");
+    }
 }
