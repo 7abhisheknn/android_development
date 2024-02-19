@@ -1,13 +1,17 @@
 package com.example.lib;
+
+import java.util.Scanner;
+
 public class MyClass {
 
     public static void main(String[] args) {
-        Circle c = new Circle (5.0);
-        Rectangle r = new Rectangle(4.0, 6.0);
-        System.out.println(c.calcualteArea());
-        System.out.println(c.calculatePerimeter());
-        System.out.println(r.calcualteArea());
-        System.out.println(r.calculatePerimeter());
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Give a number: ");
+        int a = sc.nextInt();
+        System.out.println("Give another number: ");
+        int b = sc.nextInt();
+        System.out.println(a/b);
+        System.out.println(a%b);
     }
 }
 
