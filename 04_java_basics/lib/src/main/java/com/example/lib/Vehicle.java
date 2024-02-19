@@ -6,6 +6,9 @@ public abstract class Vehicle {
     public Vehicle(int numberOfWheels) {
         this.numberOfWheels = numberOfWheels;
     }
+    void getType() {
+        System.out.println("Vehicle Type");
+    }
 
     void start() {
         System.out.println("The Vehicle Starts");

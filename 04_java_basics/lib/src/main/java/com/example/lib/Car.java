@@ -1,23 +1,28 @@
 package com.example.lib;
 
-public class Car extends Vehicle{
+public class Car implements VehicleInterface{
     String carModel;
     public Car(String carModel) {
-        super(4);
         this.carModel = carModel;
     }
 
-    void honk() {
-        System.out.println("Beep! Beep!");
+    @Override
+    public void startEngine() {
+        System.out.println("Car: Engine Start");
     }
 
     @Override
-    void start() {
-        System.out.println("The Car Starts");
+    public void stopEngine() {
+        System.out.println("Car: Engine Stop");
     }
 
     @Override
-    void brake() {
-        System.out.println("Applying mechanical break");
+    public void accelerate() {
+        System.out.println("Car: Accelerate");
+    }
+
+    @Override
+    public void brake() {
+        System.out.println("Car: brake");
     }
 }
