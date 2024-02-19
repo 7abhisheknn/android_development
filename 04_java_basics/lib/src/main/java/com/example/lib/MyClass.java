@@ -6,12 +6,12 @@ public class MyClass {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        System.out.println("Give a number: ");
-        int a = sc.nextInt();
-        System.out.println("Give another number: ");
-        int b = sc.nextInt();
-        System.out.println((float)a/b);
-        System.out.println(a%b);
+        System.out.print("Give radius: ");
+        double r = sc.nextDouble();
+        Circle c = new Circle(r);
+        System.out.println(c.getArea());
+        System.out.println(c.getPerimeter());
+        System.out.println(c.getPerimeter());
     }
 }
 
