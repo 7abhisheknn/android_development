@@ -3,8 +3,12 @@ package com.example.d08_currency_converter;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -121,27 +125,49 @@ public class MainActivity extends AppCompatActivity {
             "Venezuelan Bolivar"
     };
 
+    private AutoCompleteTextView fromCurrency;
+    private AutoCompleteTextView toCurrency;
+
+    private EditText amount;
+
+    private TextView result;
+
+    private void initilize() {
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_dropdown_item_1line, currency);
+        fromCurrency.setAdapter(adapter);
+        toCurrency.setAdapter(adapter);
+    }
+
+    private void calculate() {
+        String fromCurrStr = fromCurrency.getText().toString();
+        String toCurrStr = toCurrency.getText().toString();
+        Double amountVal = Double.valueOf(amount.getText().toString());
+
+        Double ans = amountVal*curr1USD.get(toCurrStr)/curr1USD.get(fromCurrStr);
+
+        result.setText(String.valueOf(ans));
+    }
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // Initialize the AutoCompleteTextView
-        AutoCompleteTextView autoCompleteTextView = (AutoCompleteTextView) findViewById(R.id.fromCurrency);
 
-// Create an ArrayAdapter with the options array
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_dropdown_item_1line, currency);
+        fromCurrency = findViewById(R.id.fromCurrency);
+        toCurrency = findViewById(R.id.toCurrency);
+        amount = findViewById(R.id.amount);
+        result = findViewById(R.id.result);
+        initilize();
 
-// Set the ArrayAdapter to the AutoCompleteTextView
-        autoCompleteTextView.setAdapter(adapter);
-
-        autoCompleteTextView = (AutoCompleteTextView) findViewById(R.id.toCurrency);
-
-// Create an ArrayAdapter with the options array
-        adapter = new ArrayAdapter<String>(this, android.R.layout.simple_dropdown_item_1line, currency);
-
-// Set the ArrayAdapter to the AutoCompleteTextView
-        autoCompleteTextView.setAdapter(adapter);
+        Button button = findViewById(R.id.button);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                calculate();
+            }
+        });
 
     }
 }

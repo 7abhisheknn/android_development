@@ -39,13 +39,14 @@
         android:id="@+id/fromCurrency"
         android:layout_width="250dp"
         android:layout_height="50dp"
-        android:hint="From Currency"
-        android:textStyle="bold"
-        android:inputType="text"
         android:completionHint="Select an option"
+        android:hint="From Currency"
+        android:inputType="text"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
     <TextView
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
@@ -64,10 +65,10 @@
         android:id="@+id/amount"
         android:layout_width="250dp"
         android:layout_height="50dp"
-        android:hint="Enter Amount"
-        android:textStyle="bold"
-        android:inputType="numberDecimal"
         android:completionHint="Select an option"
+        android:hint="Enter Amount"
+        android:inputType="numberDecimal"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView4" />
@@ -91,13 +92,41 @@
         android:id="@+id/toCurrency"
         android:layout_width="250dp"
         android:layout_height="50dp"
-        android:hint="To Currency"
-        android:textStyle="bold"
-        android:inputType="text"
         android:completionHint="Select an option"
+        android:hint="To Currency"
+        android:inputType="text"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="38dp"
+        android:layout_marginEnd="45dp"
+        android:backgroundTint="#63361F"
+        android:text="Calculate"
+        android:textColor="#FFFEBD"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/toCurrency"
+        app:layout_constraintTop_toBottomOf="@+id/toCurrency" />
+
+    <!--        android:text="Result: hi there\nHint: Invest in India"-->
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="112dp"
+        android:textColor="#FFFEBD"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
