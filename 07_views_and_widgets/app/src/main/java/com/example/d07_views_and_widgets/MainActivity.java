@@ -17,7 +17,14 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        ImageView myImageView = findViewById(R.id.myIMG);
-        myImageView.setImageResource(R.drawable.sunflower);
+        Button myBTN = findViewById(R.id.btn);
+        EditText myEditTex = findViewById(R.id.editText);
+
+        myBTN.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(MainActivity.this, myEditTex.getText().toString() + ", Welcome to the Club", Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 }
