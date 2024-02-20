@@ -8,22 +8,17 @@
     tools:context=".MainActivity">
 
 
-    <TextView
-        android:id="@+id/myTextView"
-        android:layout_width="wrap_content"
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="20sp"
-        android:background="#FFFF00"
-        android:gravity="center_horizontal"
-        android:padding="20sp"
-        android:textAllCaps="true"
-        android:textColor="#FF0000"
+        android:maxHeight="250dp"
+        android:hint="Enter Your Name"
+        android:inputType="text"
+        android:textColor="#0022FF"
         android:textSize="32sp"
-        android:textStyle="bold"
-        android:typeface="serif"
-
-
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:maxLength="120"
+        android:layout_margin="40dp"
+        android:padding="20dp"
+        android:textStyle="bold"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

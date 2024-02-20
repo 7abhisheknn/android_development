@@ -3,6 +3,7 @@ package com.example.d07_views_and_widgets;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.widget.EditText;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
@@ -12,7 +13,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        TextView myTextView = findViewById(R.id.myTextView);
-        myTextView.setText("Hello From java");
+        EditText myEditText = findViewById(R.id.editText);
+        String input = myEditText.getText().toString();
+
     }
 }
