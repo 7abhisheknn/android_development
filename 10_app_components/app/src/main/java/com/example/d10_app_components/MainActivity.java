@@ -3,6 +3,7 @@ package com.example.d10_app_components;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -19,13 +20,20 @@ public class MainActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                goToSecondActivity();
+//                goToSecondActivity();
+                openWebPage();
             }
         });
     }
 
-    public void goToSecondActivity() {
+    private void goToSecondActivity() {
         Intent intent = new Intent(this, SecondActivity.class);
+        startActivity(intent);
+    }
+
+    private void openWebPage() {
+        Uri webpage = Uri.parse("https://www.google.com");
+        Intent intent = new Intent(Intent.ACTION_VIEW, webpage);
         startActivity(intent);
     }
 
