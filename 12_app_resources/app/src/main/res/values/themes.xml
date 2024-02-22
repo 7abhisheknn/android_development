@@ -3,6 +3,8 @@
     <style name="Base.Theme._12_app_resources" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+
+        <item name="colorPrimary">@color/blue_color</item>
     </style>
 
     <style name="Theme._12_app_resources" parent="Base.Theme._12_app_resources" />
