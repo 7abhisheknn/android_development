@@ -3,15 +3,19 @@ package com.example.d13_more_widgets;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.widget.ArrayAdapter;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     CheckBox checkbox;
     RadioGroup radioGroup;
+
+    Spinner spinner;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,5 +42,13 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(MainActivity.this, radioButton.getText().toString() + " this radio selected", Toast.LENGTH_SHORT).show();
             }
         });
+
+        String[] courses = {"Java", "C++", "Python", "Android"};
+
+        spinner = findViewById(R.id.spinner);
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, courses);
+
+        spinner.setAdapter(adapter);
+
     }
 }
