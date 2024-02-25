@@ -3,9 +3,12 @@ package com.example.d13_more_widgets;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
+import android.widget.DatePicker;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Spinner;
@@ -19,6 +22,10 @@ public class MainActivity extends AppCompatActivity {
     Spinner spinner;
 
     TimePicker timePicker;
+
+    DatePicker datePicker;
+
+    Button btn;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -62,5 +69,21 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(MainActivity.this, "Time= " + hourOfDay + " : " + minute, Toast.LENGTH_SHORT).show();
             }
         });
+
+        datePicker = findViewById(R.id.datePicker);
+        btn = findViewById(R.id.btn);
+
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String day = "Day: " + datePicker.getDayOfMonth();
+                String month = "Month: " + datePicker.getMonth();
+                String year = "Year: " + datePicker.getYear();
+                System.out.println(day + ", " + month + ", " + year);
+                Toast.makeText(MainActivity.this, day + ", " + month + ", " + year, Toast.LENGTH_SHORT).show();
+
+            }
+        });
+
     }
 }
