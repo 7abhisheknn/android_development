@@ -10,8 +10,10 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:textSize="30dp"
+        android:text="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium adipisci alias aliquid aperiam architecto consequatur consequuntur corporis cupiditate deserunt doloremque est hic illo ipsa, ipsum libero magni, modi molestias nam nisi non, perspiciatis placeat quae repudiandae sapiente voluptatem! Consectetur dolorem earum eveniet itaque, laudantium tenetur voluptas? Iste itaque nesciunt reprehenderit."
         app:layout_constraintBottom_toBottomOf="parent"
+        android:fontFamily="@font/new_font"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
