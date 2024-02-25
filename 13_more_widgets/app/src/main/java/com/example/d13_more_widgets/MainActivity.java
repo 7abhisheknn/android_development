@@ -9,6 +9,7 @@ import android.widget.CompoundButton;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Spinner;
+import android.widget.TimePicker;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
@@ -16,6 +17,8 @@ public class MainActivity extends AppCompatActivity {
     RadioGroup radioGroup;
 
     Spinner spinner;
+
+    TimePicker timePicker;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -50,5 +53,14 @@ public class MainActivity extends AppCompatActivity {
 
         spinner.setAdapter(adapter);
 
+
+        timePicker = findViewById(R.id.timePicker);
+
+        timePicker.setOnTimeChangedListener(new TimePicker.OnTimeChangedListener() {
+            @Override
+            public void onTimeChanged(TimePicker view, int hourOfDay, int minute) {
+                Toast.makeText(MainActivity.this, "Time= " + hourOfDay + " : " + minute, Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 }
