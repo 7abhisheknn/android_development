@@ -9,6 +9,7 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.DatePicker;
+import android.widget.ProgressBar;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Spinner;
@@ -26,6 +27,8 @@ public class MainActivity extends AppCompatActivity {
     DatePicker datePicker;
 
     Button btn;
+    Button progressBtn;
+    ProgressBar progressBar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -82,6 +85,16 @@ public class MainActivity extends AppCompatActivity {
                 System.out.println(day + ", " + month + ", " + year);
                 Toast.makeText(MainActivity.this, day + ", " + month + ", " + year, Toast.LENGTH_SHORT).show();
 
+            }
+        });
+
+        progressBar = findViewById(R.id.progressBar);
+        progressBtn = findViewById(R.id.progessBtn);
+
+        progressBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                progressBar.setProgress(progressBar.getProgress() + 10);
             }
         });
 
