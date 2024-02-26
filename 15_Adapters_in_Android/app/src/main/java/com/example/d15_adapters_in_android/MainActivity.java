@@ -24,12 +24,13 @@ public class MainActivity extends AppCompatActivity {
 
         ArrayList<String> moreCountries= new ArrayList<>();
 
-        for(int i = 0; i < 50; i++) {
+        for(int i = 0; i < 10; i++) {
             moreCountries.addAll(countriesList);
         }
 
-        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, moreCountries);
+//        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, moreCountries);
 
-        listView.setAdapter(adapter);
+        MyCustomAdapter myCustomAdapter = new MyCustomAdapter(this, moreCountries);
+        listView.setAdapter(myCustomAdapter);
     }
 }
