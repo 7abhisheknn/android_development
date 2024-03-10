@@ -1,6 +1,7 @@
 package com.example.d0001_recycler_view;
 
 import android.os.Bundle;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -12,9 +13,10 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements NumberInterface{
     RecyclerView recyclerView;
     ArrayList<NumberModel> numberModelList = new ArrayList<>();
+    NumberAdapter adapter;
     int[] numberImages = {
             R.drawable.n1,
             R.drawable.n2,
@@ -49,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
         });
         setUpNumbers();
         recyclerView = findViewById(R.id.mRecyclerView);
-        NumberAdapter adapter = new NumberAdapter(this, numberModelList);
+        adapter = new NumberAdapter(this, numberModelList, this);
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
     }
@@ -62,5 +64,17 @@ public class MainActivity extends AppCompatActivity {
         for(int i = 0; i < englishNames.length; i++) {
             numberModelList.add(new NumberModel(englishNames[i], kannadaNames[i], kannadaSymbols[i], numberImages[i]));
         }
+    }
+
+    @Override
+    public void onNumberClick(int position) {
+        NumberModel numberModel = numberModelList.get(position);
+        Toast.makeText(this, numberModel.getEnglish(), Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    public void onNumberLongClick(int position) {
+        numberModelList.remove(position);
+        adapter.notifyItemRemoved(position);
     }
 }
