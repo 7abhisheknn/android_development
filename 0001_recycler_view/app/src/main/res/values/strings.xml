@@ -1,0 +1,71 @@
+<resources>
+    <string name="app_name">0001_recycler_view</string>
+
+    <string-array name="number_english">
+        <item>One</item>
+        <item>Two</item>
+        <item>Three</item>
+        <item>Four</item>
+        <item>Five</item>
+        <item>Six</item>
+        <item>Seven</item>
+        <item>Eight</item>
+        <item>Nine</item>
+        <item>Ten</item>
+        <item>Eleven</item>
+        <item>Twelve</item>
+        <item>Thirteen</item>
+        <item>Fourteen</item>
+        <item>Fifteen</item>
+        <item>Sixteen</item>
+        <item>Seventeen</item>
+        <item>Eighteen</item>
+        <item>Nineteen</item>
+        <item>Twenty</item>
+    </string-array>
+
+    <string-array name="number_kannada">
+        <item>ಒಂದು</item>
+        <item>ಎರಡು</item>
+        <item>ಮೂರು</item>
+        <item>ನಾಲ್ಕು</item>
+        <item>ಅಯ್ದು</item>
+        <item>ಆರು</item>
+        <item>ಏಳು</item>
+        <item>ಎಂಟು</item>
+        <item>ಒಂಬತ್ತು</item>
+        <item>ಹತ್ತು</item>
+        <item>ಹನ್ನೊಂದು</item>
+        <item>ಹನ್ನೆರಡು</item>
+        <item>ಹದಿಮೂರು</item>
+        <item>ಹದಿನಾಲ್ಕು</item>
+        <item>ಹದಿನೈದು</item>
+        <item>ಹದಿನಾರು</item>
+        <item>ಹದಿನೇಳು</item>
+        <item>ಹದಿನೆಂಟು</item>
+        <item>ಹತ್ತೊಂಬತ್ತು</item>
+        <item>ಇಪ್ಪತ್ತು</item>
+    </string-array>
+    <string-array name="number_kannada_symbol">
+        <item>೧</item>
+        <item>೨</item>
+        <item>೩</item>
+        <item>೪</item>
+        <item>೫</item>
+        <item>೬</item>
+        <item>೭</item>
+        <item>೮</item>
+        <item>೯</item>
+        <item>೧೦</item>
+        <item>೧೧</item>
+        <item>೧೨</item>
+        <item>೧೩</item>
+        <item>೧೪</item>
+        <item>೧೫</item>
+        <item>೧೬</item>
+        <item>೧೭</item>
+        <item>೧೮</item>
+        <item>೧೯</item>
+        <item>೨೦</item>
+    </string-array>
+</resources>
