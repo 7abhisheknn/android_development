@@ -1,15 +1,26 @@
 package com.example.d0002_view_pager_2;
 
 import android.os.Bundle;
+import android.view.View;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+import androidx.viewpager2.widget.ViewPager2;
+
+import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
-
+    ArrayList<SliderItem> sliderItemList = new ArrayList<SliderItem>(){{
+        add(new SliderItem("page_1"));
+        add(new SliderItem("page_2"));
+        add(new SliderItem("page_3"));
+        add(new SliderItem("page_4"));
+        add(new SliderItem("page_5"));
+    }};
+    private ViewPager2 viewPager2;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,5 +31,10 @@ public class MainActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+
+        viewPager2 = findViewById(R.id.viewPagerImageSlider);
+
+        viewPager2.setAdapter(new SliderAdapter(sliderItemList, viewPager2));
+
     }
 }
