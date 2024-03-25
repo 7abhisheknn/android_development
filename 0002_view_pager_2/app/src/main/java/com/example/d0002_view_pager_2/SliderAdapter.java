@@ -36,7 +36,7 @@ public class SliderAdapter extends RecyclerView.Adapter<SliderAdapter.SliderView
 
     @Override
     public void onBindViewHolder(@NonNull SliderViewHolder holder, int position) {
-        holder.setText(sliderItems.get(position));
+        holder.setTextAndColor(sliderItems.get(position));
     }
 
     @Override
@@ -52,9 +52,9 @@ public class SliderAdapter extends RecyclerView.Adapter<SliderAdapter.SliderView
             textView = itemView.findViewById(R.id.textSlide);
         }
 
-        void setText(SliderItem sliderItem) {
+        void setTextAndColor(SliderItem sliderItem) {
             textView.setText(sliderItem.getText());
-            textView.setBackgroundColor(Color.parseColor("#FFA500"));
+            textView.setBackgroundColor(Color.parseColor(sliderItem.getColor()));
         }
     }
 }

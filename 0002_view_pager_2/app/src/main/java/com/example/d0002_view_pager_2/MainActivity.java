@@ -14,11 +14,12 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
     ArrayList<SliderItem> sliderItemList = new ArrayList<SliderItem>(){{
-        add(new SliderItem("page_1"));
-        add(new SliderItem("page_2"));
-        add(new SliderItem("page_3"));
-        add(new SliderItem("page_4"));
-        add(new SliderItem("page_5"));
+        add(new SliderItem("page_1", "#FF0000"));
+        add(new SliderItem("page_2", "#00FF00"));
+        add(new SliderItem("page_3", "#0000FF"));
+        add(new SliderItem("page_4", "#FFFF00"));
+        add(new SliderItem("page_5", "#FF00FF"));
+        add(new SliderItem("page_6", "#00FFFF"));
     }};
     private ViewPager2 viewPager2;
     @Override
