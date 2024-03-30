@@ -6,6 +6,7 @@
     android:background="#FFFF00"
     android:textSize="32sp"
     android:gravity="center"
+
     >
 
 </TextView>
