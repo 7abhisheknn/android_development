@@ -1,4 +1,5 @@
 package com.example.d0002_navigation_drawer;
+import androidx.activity.OnBackPressedCallback;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
@@ -54,11 +55,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         return true;
     }
     @Override
-    public void onBackPressed() {
+    protected void onDestroy() {
         if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
             drawerLayout.closeDrawer(GravityCompat.START);
         } else {
-            super.onBackPressed();
+            super.onDestroy();
         }
     }
 }
