@@ -4,6 +4,7 @@ package com.example.a58_kotlin_basics
 //}
 
 fun main() {
-    var c = Car("bmv", 1, "red")
-    println("${c.brand} ${c.color} ${c.year}")
+    var x = mutableListOf("ram", "bhemm", "soam", 1, 2, 50.5)
+    x[1] = "ramram"
+    println(x[1])
 }
